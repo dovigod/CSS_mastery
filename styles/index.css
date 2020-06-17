@@ -1,0 +1,33 @@
+
+
+
+.father{
+    height: 200vh;
+    display: flex;
+
+    justify-content: space-between;
+
+    /* default of main-axis == row*/
+    
+   /* flex-wrap: nowrap;  default*/
+   flex-wrap: wrap-reverse; /* browse가 작아짐에 따라 contents를 inline에 두려고하는데, contents의 너비나 높이 보존함*/
+   flex-direction: row;
+   /*align-content: 컨텐츠 사이의 빈공간에 대해 적용*/;
+
+}
+
+.child{
+    display: flex;
+    color: white;
+    background-color: peru;
+    font-size: 40px;
+    height: 200px;
+    width: 200px;
+}
+
+
+.child:nth-child(2){
+    order:1;   /** element의 기본 order은 0이야 **/
+    align-self: center; /** align -item이 flexbox내의 모든 요소에 작용하는거라면 이건 단일 대상에게 작용**/
+}
+

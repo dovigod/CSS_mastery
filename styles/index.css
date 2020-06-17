@@ -2,18 +2,10 @@
 
 
 .father{
-    height: 200vh;
+  
     display: flex;
-
+    flex-wrap: wrap;
     justify-content: space-between;
-
-    /* default of main-axis == row*/
-    
-   /* flex-wrap: nowrap;  default*/
-   flex-wrap: wrap-reverse; /* browse가 작아짐에 따라 contents를 inline에 두려고하는데, contents의 너비나 높이 보존함*/
-   flex-direction: row;
-   /*align-content: 컨텐츠 사이의 빈공간에 대해 적용*/;
-
 }
 
 .child{
@@ -21,21 +13,14 @@
     color: white;
     background-color: peru;
     font-size: 40px;
-    flex-basis: 200px;
-}
-
-
-.child:nth-child(2){
-    order:1;   /** element의 기본 order은 0이야 **/
-    /*align-self: center; *//** align -item이 flexbox내의 모든 요소에 작용하는거라면 이건 단일 대상에게 작용**/
-    flex-grow: 2;    /*화면이 늘어날때, 빈공간들을 이놈이랑 3번 차일드랑 2:3비율로 빈공간을 차지함 반응형 디자인할때 유용*/ 
+    justify-content: center;  /*if content number is only 5, problem happens cause of space between we want GRID! hard to make grid form in flex box*/
+    flex-basis: 30%;
 
 }
 
-.child:nth-child(3){
 
-    flex-shrink: 1;/*기본값이 1  2로하면 1보단 2배빠르게 줄어듬 3... 4... 몇배속으로 줄어듬*/
-    flex-grow: 3;
+.child:nth-child(4){
+    margin-top: 10px;  /** problem!!!  vertical blank doesn't matches with horizontal blank*/
+
 }
-
 

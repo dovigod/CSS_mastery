@@ -1,0 +1,26 @@
+
+
+
+.father{
+  
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.child{
+    display: flex;
+    color: white;
+    background-color: peru;
+    font-size: 40px;
+    justify-content: center;  /*if content number is only 5, problem happens cause of space between we want GRID! hard to make grid form in flex box*/
+    flex-basis: 30%;
+
+}
+
+
+.child:nth-child(4){
+    margin-top: 10px;  /** problem!!!  vertical blank doesn't matches with horizontal blank*/
+
+}
+

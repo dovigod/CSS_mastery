@@ -7,21 +7,24 @@
  ; /* fraction use as mush possible area u have*/ 
     /*column-gap: 10px;
     row-gap: 10px;*/
-    height: 100vh;/*half of my screen*/
+    height: 100vh;/*half of my 
+    screen*/
     gap:10px;
-    grid-template:
-    [h-start]"header header header header" 1fr [h-end]
-    [c-start]"content content content nav" 2fr [c-end]
-    [f-start]"footer footer footer footer" 1fr [f-end]/ 1fr 1fr 1fr 1fr;
+ 
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows:repeat(4,1fr) ;
+   /*justify-items : default strtch,start center end vertical == align ite*/
 
-  
+   /* place-items: y/x   */
+
+   place-items: center center;
    
 }
 
 .head{
 
     background-color: plum;
-    grid-area: header;
+    
 
 }
 
@@ -29,16 +32,16 @@
 .content{
     background-color: red;
 
-  grid-area:content;
+  
 
 }
 
 .nav{
     background-color: peru;
-    grid-area:nav;
+    
 }
 
 .foot{
     background-color: rebeccapurple;
-    grid-area:footer;
+    
 }

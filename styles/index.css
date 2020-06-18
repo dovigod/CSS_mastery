@@ -7,18 +7,21 @@
  ; /* fraction use as mush possible area u have*/ 
     /*column-gap: 10px;
     row-gap: 10px;*/
-    height: 100vh;/*half of my 
+    height: 250vh;/*half of my 
     screen*/
     gap:10px;
  
-    grid-template-columns: repeat(4,1fr);
-    grid-template-rows:repeat(4,1fr) ;
+    grid-template-columns: repeat(4,100px);
+    grid-template-rows:repeat(5,100px) ;
    /*justify-items : default strtch,start center end vertical == align ite*/
 
    /* place-items: y/x   */
 
-   place-items: center center;
-   
+  
+   justify-content: center;
+   align-content: stretch;
+  
+   /* item is cell,,, but content is grid */
 }
 
 .head{

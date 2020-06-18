@@ -10,7 +10,8 @@
 
     gap:10px;
  
-    grid-template-columns: repeat(auto-fill,minmax(100px,1fr));
+    grid-template-columns: repeat(5,minmax(max-content,1fr));
+    /* grid-template-columns: repeat(auto-fill,autofit,minmax("이자리에만 상수면 됨",1fr)); */
     grid-template-rows: repeat(3,minmax(100px,1fr));
     grid-auto-rows: 100px;
     /* contents가 많아질때 자동으로 높이 추가해줌 */
@@ -30,29 +31,4 @@
 
 .items:nth-child(even){
     background-color: royalblue;
-}
-.head{
-
-    background-color: plum;
-
-    place-self: end center;    
-
-}
-
-
-.content{
-    background-color: red;
-
-  
-
-}
-
-.nav{
-    background-color: peru;
-    
-}
-
-.foot{
-    background-color: rebeccapurple;
-    
 }

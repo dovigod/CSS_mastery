@@ -4,21 +4,24 @@
 .grid{
   
     display: grid;
-    grid-template-columns:  1fr 1fr 1fr 1fr  ; /* fraction use as mush possible area u have*/ 
+ ; /* fraction use as mush possible area u have*/ 
     /*column-gap: 10px;
     row-gap: 10px;*/
-    height: 50vh;/*half of my screen*/
-    grid-template-rows: repeat(4,1fr);
-    gap:10px
+    height: 100vh;/*half of my screen*/
+    gap:10px;
+    grid-template:
+    [h-start]"header header header header" 1fr [h-end]
+    [c-start]"content content content nav" 2fr [c-end]
+    [f-start]"footer footer footer footer" 1fr [f-end]/ 1fr 1fr 1fr 1fr;
+
+  
    
 }
 
 .head{
 
     background-color: plum;
-    grid-column: 1/-1; /* e-1 -2 -3 .... refers to end*/
-    grid-row-start:2;
-  
+    grid-area: header;
 
 }
 
@@ -26,16 +29,16 @@
 .content{
     background-color: red;
 
-    grid-column : span 4; /* span = number of cells , 4*/ 
-  
+  grid-area:content;
+
 }
 
 .nav{
     background-color: peru;
-
+    grid-area:nav;
 }
 
 .foot{
     background-color: rebeccapurple;
-
+    grid-area:footer;
 }

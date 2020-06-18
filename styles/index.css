@@ -4,37 +4,36 @@
 .grid{
   
     display: grid;
-    grid-template-columns: auto 200px;
+    grid-template-columns: 100px 100px 100px 100px;
     /*column-gap: 10px;
     row-gap: 10px;*/
-    gap:10px;
-    grid-template-rows: 100px repeat(2,200px) 100px;
-    grid-template-areas: /*making layout!!!*/
-    "head head head head"
-    "content content . nav"
-    "content content . nav" /*. = 빈칸*/
-    "foot foot foot foot";
+    grid-template-rows: 100px repeat(2,100px) 100px;
+    gap:10px
+   
 }
 
 .head{
 
     background-color: plum;
-    grid-area: head;
+    grid-column-start: 1; /* 좌측 빈공간이 line 1,,this lines are absolute position*/
+    grid-column-end: 5;
+    grid-row-start:2;
+  
 
 }
 
 
 .content{
     background-color: red;
-    grid-area: content;
+  
 }
 
 .nav{
     background-color: peru;
-    grid-area: nav;
+
 }
 
 .foot{
     background-color: rebeccapurple;
-    grid-area: foot;
+
 }

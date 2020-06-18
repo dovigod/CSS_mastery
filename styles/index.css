@@ -1,23 +1,40 @@
 
 
 
-.father{
+.grid{
   
     display: grid;
-    grid-template-columns: 250px 250px 250px;
+    grid-template-columns: auto 200px;
     /*column-gap: 10px;
     row-gap: 10px;*/
     gap:10px;
-    grid-template-rows: 100px 100px 100px;
+    grid-template-rows: 100px repeat(2,200px) 100px;
+    grid-template-areas: /*making layout!!!*/
+    "head head head head"
+    "content content . nav"
+    "content content . nav" /*. = 빈칸*/
+    "foot foot foot foot";
 }
 
-.child{
-    display: flex;
-    color: white;
+.head{
+
+    background-color: plum;
+    grid-area: head;
+
+}
+
+
+.content{
+    background-color: red;
+    grid-area: content;
+}
+
+.nav{
     background-color: peru;
-    font-size: 40px;
-    justify-content: center;  /*if content number is only 5, problem happens cause of space between we want GRID! hard to make grid form in flex box*/
-    flex-basis: 30%;
-    align-items: center;
+    grid-area: nav;
 }
 
+.foot{
+    background-color: rebeccapurple;
+    grid-area: foot;
+}

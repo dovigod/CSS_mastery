@@ -7,27 +7,30 @@
  ; /* fraction use as mush possible area u have*/ 
     /*column-gap: 10px;
     row-gap: 10px;*/
-    height: 250vh;/*half of my 
-    screen*/
+
     gap:10px;
  
-    grid-template-columns: repeat(4,100px);
-    grid-template-rows:repeat(5,100px) ;
-   /*justify-items : default strtch,start center end vertical == align ite*/
+    grid-template-columns: repeat(3,100px);
+    grid-template-rows: repeat(3,100px);
+    grid-auto-rows: 100px;
+    /* contents가 많아질때 자동으로 높이 추가해줌 */
 
-   /* place-items: y/x   */
-
-  
-   justify-content: center;
-   align-content: stretch;
-  
-   /* item is cell,,, but content is grid */
+    /* 디폴트는 새로운 요소가 추가될때 세로축으로 추가하는데 만약 가로축으로 추가하고프면?? grid-auto-flow도 바꾼다 */
+    grid-auto-flow: column;
+    grid-auto-columns: 100px;
+}
+.items:nth-child(odd){
+    background-color: green;
 }
 
+.items:nth-child(even){
+    background-color: royalblue;
+}
 .head{
 
     background-color: plum;
-    
+
+    place-self: end center;    
 
 }
 

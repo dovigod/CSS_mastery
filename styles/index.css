@@ -15,8 +15,7 @@
 .head{
 
     background-color: plum;
-    grid-column-start: 1; /* 좌측 빈공간이 line 1,,this lines are absolute position*/
-    grid-column-end: 5;
+    grid-column: 1/-1; /* e-1 -2 -3 .... refers to end*/
     grid-row-start:2;
   
 
@@ -25,6 +24,8 @@
 
 .content{
     background-color: red;
+
+    grid-column : span 4; /* span = number of cells , 4*/ 
   
 }
 

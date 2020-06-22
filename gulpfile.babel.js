@@ -12,9 +12,11 @@ import babelify from "babelify";
 import gitDeploy from "gulp-gh-pages";
 
 gSass.compiler = require("node-sass");
+
+
 const routes = {
     pug:{
-        src: "src/*.pug", 
+        src: "src/**/*.pug", 
         watch: "src/**/*.pug",
         dest:"dist"
     },
@@ -106,7 +108,7 @@ const GDP = () => gulp.src("dist/**/*").pipe(gitDeploy({
 //img는 용량이커서 시간 많이 잡아먹으니까 prepare section에서 시행시키는게 나을듯, 계속 watch당하면 너무 비효율적임
 const prepare = gulp.series([clear,img]);
 const live = gulp.parallel([webserver,watchTarget]); //동시 실행
-const assets =  gulp.series([pug,css,js]);
+const assets =  gulp.series([css,pug,js]);
 
 
 export const dev = gulp.series([prepare,assets,live]);

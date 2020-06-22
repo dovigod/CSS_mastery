@@ -1,13 +1,24 @@
 @import "_reset";
 @import "_variables";
+@import "_mixins";
 
 
 body{
-    background-color: $red;
+    background-color: $bg;
     display: flex;
     justify-content: center;
     align-items: center;
+    @include initSpan();
 }
-img{
-    max-width: 100px;
+
+a{
+    
+    margin-top: 10px;
+
+    &:nth-child(odd){
+        @include linker(odd);
+    }
+    &:nth-child(even){
+        @include linker(even);
+    }
 }

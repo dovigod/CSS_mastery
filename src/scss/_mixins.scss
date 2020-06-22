@@ -1,0 +1,17 @@
+@mixin initSpan {
+
+    color : gold;
+    font-size: 30px;
+    
+}
+
+@mixin linker($word){
+    @if $word == "odd"{
+        color : red;
+    }@else{
+        color : blue;
+    }
+
+    text-decoration: none;
+    display: block;
+}

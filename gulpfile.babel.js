@@ -47,6 +47,7 @@ const js = () => gulp.src(routes.js.src)
         ]
     }
 
+
     )
 )
 .pipe(gulp.dest(routes.js.dest));
@@ -56,7 +57,7 @@ const js = () => gulp.src(routes.js.src)
 const css = () => gulp.src(routes.scss.src)
         .pipe(gSass().on("error",logError))
         .pipe(autoPrefix({
-            browsers: ["last 2 versions"]
+          overrideBrowserslist: ["last 2 versions"]
         }))
         .pipe(csso())
         .pipe(dest(routes.scss.dest));

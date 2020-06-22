@@ -1,8 +1,14 @@
 @import "_reset";
 @import "_variables";
 @import "_mixins";
+@import "_button";
 
 
+button{
+    @extend %button;
+    border:none;
+    font-weight: 500;
+}
 body{
     background-color: $bg;
     display: flex;
@@ -11,14 +17,18 @@ body{
     @include initSpan();
 }
 
-a{
-    
-    margin-top: 10px;
 
-    &:nth-child(odd){
-        @include linker(odd);
+a {
+    margin-bottom: 10px;
+    &:nth-child(odd) {
+      @include linker("odd");
+      @extend %button;
+      font-family: inherit;
+
     }
-    &:nth-child(even){
-        @include linker(even);
+    
+    &:nth-child(even) {
+      @include linker("even");
     }
+
 }

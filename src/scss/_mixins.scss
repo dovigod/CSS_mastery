@@ -7,9 +7,9 @@
 
 @mixin linker($word){
     @if $word == "odd"{
-        color : red;
-    }@else{
         color : blue;
+    }@else{
+        color : red;
     }
 
     text-decoration: none;

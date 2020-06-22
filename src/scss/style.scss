@@ -4,31 +4,19 @@
 @import "_button";
 
 
-button{
-    @extend %button;
-    border:none;
-    font-weight: 500;
-}
-body{
-    background-color: $bg;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    @include initSpan();
+
+a{
+
+
 }
 
+h1{
 
-a {
-    margin-bottom: 10px;
-    &:nth-child(odd) {
-      @include linker("odd");
-      @extend %button;
-      font-family: inherit;
-
+    color: red;
+    @include responsive("iphone"){
+        color:yellow;
     }
-    
-    &:nth-child(even) {
-      @include linker("even");
+    @include responsive("ipad"){
+        color:green;
     }
-
 }

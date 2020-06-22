@@ -1,17 +1,14 @@
-@mixin initSpan {
+@mixin responsive($device) {
 
-    color : gold;
-    font-size: 30px;
-    
-}
-
-@mixin linker($word){
-    @if $word == "odd"{
-        color : blue;
-    }@else{
-        color : red;
+    @if $device == "iphone"{
+        @media screen and (max-width: 690px ) (min-width:500px{
+            @content;
+        }
+    }@else if $device == "ipad"{
+        @media screen and (max-width: ) and (orientation: landscape){
+            @content;
+        }
     }
 
-    text-decoration: none;
-    display: block;
+
 }

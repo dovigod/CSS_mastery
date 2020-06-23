@@ -54,7 +54,7 @@ const js = () => gulp.src(routes.js.src)
 const css = () => gulp.src(routes.scss.src)
         .pipe(gSass().on("error",logError))
         .pipe(autoPrefix({
-            browsers: ["last 2 versions"]
+            overrideBrowserslist: ["last 2 versions"]
         }))
         .pipe(csso())
         .pipe(dest(routes.scss.dest));
@@ -93,19 +93,16 @@ const imgOpt = () =>{
     .src(routes.img.src)
     .pipe(image())
     .pipe(gulp.dest(routes.img.dest));} 
-
-//위에 경우 async 에러 남, 화살표 함수가 {}감싸면 this 속성이 변함 주의😂😂😂😂😂
-
+    
 const GDP = () => gulp.src("dist/**/*").pipe(gitDeploy({
     origin: "SSHrepo",
     branch: "master"
 
 })); ///problem ....
 
-//내가 커맨드 할것만 export 하면댐
-//img는 용량이커서 시간 많이 잡아먹으니까 prepare section에서 시행시키는게 나을듯, 계속 watch당하면 너무 비효율적임
+
 const prepare = gulp.series([clear,img]);
-const live = gulp.parallel([webserver,watchTarget]); //동시 실행
+const live = gulp.parallel([webserver,watchTarget]); //동
 const assets =  gulp.series([pug,css,js]);
 
 

@@ -1,13 +1,14 @@
 @import "_reset";
 @import "_variables";
+@import "header.scss";
+@import "index.scss";
+@import "footer.scss";
 
-
-body{
-    background-color: $red;
+.summit_flexBox{
     display: flex;
-    justify-content: center;
-    align-items: center;
+    background-color: red;
 }
-img{
-    max-width: 100px;
-}
+
+
+
+

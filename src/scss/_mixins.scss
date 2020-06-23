@@ -1,0 +1,5 @@
+@import "_variables";
+
+@mixin g_Color_style (){
+    color : $maincolor;
+}

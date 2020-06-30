@@ -1,0 +1,70 @@
+@import "_mixins.scss";
+
+header{
+    height: 160px;
+    display: flex;
+    
+    background-color: white;
+    width: 100%;
+   
+}
+.header_down{
+    justify-content: none;
+}
+
+.header_flex_box{
+    display: flex;
+    height: 160px;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    background-color : white;
+    z-index:1;
+}
+
+.scroll_down{
+    position: fixed;
+    width:100%;
+    justify-content: space-around;
+    margin-top: 0;
+    height: 80px;
+}
+
+.header_b{
+    display: flex;
+    justify-content: space-between;
+}
+
+.logo{
+    max-width: 80px;
+}
+
+.navigator_b{
+    display: flex;
+    justify-content: space-between;
+}
+
+.nav_t{
+    font-weight: thin;
+    margin-right: 50px;
+    @include span_style1();
+}
+.nav_t:hover{
+    opacity: 0.5;
+    cursor: pointer;
+}
+
+
+span{
+    font-family: "proxima-nova","Helvetica","Arial","sans-serif";
+
+    
+}
+.nav_imogi_r{
+    @include span_style1();
+    margin-left:5px;
+}
+
+.fa-lock{
+    opacity: 0.6;
+}

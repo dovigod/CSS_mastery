@@ -1,0 +1,78 @@
+.navigator{
+    height: 50px;
+    background-color: #F3EDE8;
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+    align-items: center;
+    opacity: 0.3;
+
+}
+
+li{
+    display: flex;
+    width: 60%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.filter_list{
+    @include span_style1();
+    opacity: $filter_opa;
+    font-weight: 400;
+}
+.filter_list:focus{
+    @include click_effect1();
+
+}
+.filter_list:hover{
+    cursor: pointer;
+}
+.nav_texture{
+    @include span_style1();
+}
+
+.fa-search{
+    
+    
+}
+.IMG{
+    width: 50%;
+}
+
+.channel1{
+    display: flex;
+    width: 100%;
+    background-color: $section_c;
+}
+
+.ImgInfo{
+    width:50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    @include span_style1();
+    color: #414141;
+
+}
+
+.discription{
+    font-family:"freight-display-pro","Times New Roman",serif;
+    font-size: 25px;
+    line-height: 30px;
+    text-align: center;
+    
+
+    
+}
+
+.date{
+    font-family:"freight-display-pro","Times New Roman",serif;
+    font-size: 15px;
+}
+
+.specify{
+    font-family:"freight-display-pro","Times New Roman",serif;
+    font-size: 15px;
+}

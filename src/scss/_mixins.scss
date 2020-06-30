@@ -3,3 +3,21 @@
 @mixin g_Color_style (){
     color : $maincolor;
 }
+
+
+@mixin span_style1(){
+    font-size: 10px;
+    font-weight: 100;
+    text-transform: uppercase;
+    letter-spacing: 3px;
+}
+
+@mixin click_effect1(){
+
+    @if(opacity == $filter_opa){
+      opacity: 1;  
+    }
+    @else{
+        opacity: 0.3;
+    }
+}
